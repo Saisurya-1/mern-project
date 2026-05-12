@@ -1,0 +1,174 @@
+/* 🌍 Global Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🏠 App Container */
+.App {
+  max-width: 850px;
+  width: 90%;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.App:hover {
+  transform: translateY(-4px);
+}
+
+/* 🌟 Title */
+h1 {
+  font-size: 2.2rem;
+  color: #2563eb;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* 📝 Form Section */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+}
+
+/* ✈️ Add Destination Button */
+button {
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+/* 🗺️ Destination List */
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* 💳 Destination Card */
+.card {
+  border: none;
+  background: #f9fafb;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.card h2 {
+  color: #1e40af;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 6px 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* 🗑️ Delete Button */
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+}
+
+/* 🌈 Empty State */
+p {
+  font-size: 1rem;
+  color: #374151;
+}
+
+/* ✨ Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e40af;
+}
+
+/* 💫 Smooth Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card,
+h1,
+button,
+input,
+textarea {
+  animation: fadeIn 0.5s ease-in-out;
+}
